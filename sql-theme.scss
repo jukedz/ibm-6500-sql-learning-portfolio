@@ -1,0 +1,330 @@
+/*-- scss:defaults --*/
+
+// Sky blue SQL palette
+$sky-50:  #f0f9ff;
+$sky-100: #e0f2fe;
+$sky-200: #bae6fd;
+$sky-300: #7dd3fc;
+$sky-400: #38bdf8;
+$sky-500: #0ea5e9;
+$sky-600: #0284c7;
+$sky-700: #0369a1;
+$sky-800: #075985;
+$sky-900: #0c4a6e;
+$ink:     #1e293b;
+$slate:   #64748b;
+
+$primary: $sky-600;
+$body-color: $ink;
+$body-bg: $sky-50;
+$link-color: $sky-700;
+$headings-color: $sky-900;
+
+$font-family-sans-serif: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace;
+$font-size-root: 17px;
+$line-height-base: 1.65;
+
+$code-color: $sky-800;
+$callout-color-tip: $sky-500;
+$callout-color-note: $sky-700;
+$callout-color-important: #6366f1;
+
+/*-- scss:rules --*/
+
+// Faint grid background, like rows and columns of a table
+body {
+  background-color: $sky-50;
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+// Title banner
+.quarto-title-banner {
+  background: linear-gradient(135deg, $sky-900 0%, $sky-700 45%, $sky-400 100%) !important;
+  position: relative;
+  overflow: hidden;
+  padding-top: 2.6rem !important;
+  padding-bottom: 2.6rem !important;
+  margin-bottom: 0 !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  .quarto-title { position: relative; z-index: 1; }
+
+  .title {
+    color: #ffffff !important;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(12, 74, 110, 0.35);
+
+    &::before {
+      content: "SELECT knowledge FROM datacamp;";
+      display: block;
+      font-family: $font-family-monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: $sky-200;
+      margin-bottom: 0.6rem;
+      text-shadow: none;
+    }
+  }
+
+  .subtitle {
+    color: $sky-100 !important;
+    font-weight: 400;
+  }
+}
+
+// Author / date meta row
+.quarto-title-meta {
+  background: #ffffff;
+  border: 1px solid $sky-200;
+  border-radius: 14px;
+  padding: 0.9rem 1.2rem;
+  margin-top: 1.4rem !important;
+  box-shadow: 0 4px 18px rgba(3, 105, 161, 0.08);
+
+  .quarto-title-meta-heading {
+    color: $sky-600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .quarto-title-meta-contents { color: $ink; font-weight: 500; }
+}
+
+// Main content card
+main.content {
+  background: #ffffff;
+  border: 1px solid $sky-100;
+  border-radius: 18px;
+  padding: 1.5rem 2.2rem 2.5rem;
+  margin-top: 1.4rem;
+  box-shadow: 0 10px 34px rgba(3, 105, 161, 0.08);
+}
+
+@media (max-width: 767px) {
+  main.content { padding: 1rem 1.1rem 1.8rem; border-radius: 12px; }
+}
+
+// Headings
+h1, h2, h3, h4 { font-weight: 750; }
+
+main h1:not(.title) {
+  color: $sky-900;
+  padding-bottom: 0.45rem;
+  margin-top: 2.6rem;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, $sky-500, $sky-200 60%, transparent) 1;
+}
+
+main h2 {
+  color: $sky-800;
+  margin-top: 2.2rem;
+  padding: 0.55rem 0.95rem;
+  background: linear-gradient(90deg, $sky-100, rgba(224, 242, 254, 0));
+  border-left: 5px solid $sky-500;
+  border-radius: 0 10px 10px 0;
+  border-bottom: none !important;
+}
+
+main h3 {
+  color: $sky-700;
+  margin-top: 2rem;
+  padding-left: 0.7rem;
+  border-left: 3px solid $sky-300;
+}
+
+main h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $sky-600;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+
+  &::before {
+    content: "\25B8";
+    margin-right: 0.4rem;
+    color: $sky-400;
+  }
+}
+
+.header-section-number { color: $sky-500; margin-right: 0.25rem; }
+
+// Code blocks
+div.sourceCode {
+  background: $sky-50 !important;
+  border: 1px solid $sky-200 !important;
+  border-left: 5px solid $sky-500 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.08);
+}
+
+pre.sourceCode, div.sourceCode pre {
+  background: transparent !important;
+  font-size: 0.9rem;
+  padding: 0.9rem 1rem;
+}
+
+div.sourceCode code span.kw { color: $sky-700; font-weight: 700; }
+div.sourceCode code span.co { color: $slate; font-style: italic; }
+div.sourceCode code span.st { color: #be185d; }
+div.sourceCode code span.dv,
+div.sourceCode code span.fl { color: #7c3aed; }
+div.sourceCode code span.fu { color: #0891b2; }
+div.sourceCode code span.dt { color: #0f766e; font-weight: 600; }
+div.sourceCode code span.op { color: $sky-600; }
+
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  background: $sky-100;
+  color: $sky-800;
+  padding: 0.1rem 0.35rem;
+  border-radius: 5px;
+  font-size: 0.88em;
+}
+
+// Tables
+main table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $sky-200;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.93rem;
+
+  thead th {
+    background: linear-gradient(90deg, $sky-700, $sky-500) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 650;
+    padding: 0.6rem 0.8rem !important;
+  }
+  tbody td {
+    border-top: 1px solid $sky-100 !important;
+    padding: 0.55rem 0.8rem !important;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) td { background: $sky-50; }
+}
+
+// Callouts
+.callout {
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.07);
+}
+
+// Figures
+.figure img, figure img, .quarto-figure img {
+  border-radius: 12px;
+  border: 1px solid $sky-200;
+  box-shadow: 0 10px 28px rgba(3, 105, 161, 0.16);
+}
+.figure-caption, figcaption {
+  color: $slate;
+  font-size: 0.88rem;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+// Table of contents
+#TOC, nav#TOC {
+  #toc-title, .toc-actions, h2 {
+    color: $sky-800;
+    font-weight: 750;
+  }
+  a.nav-link { color: $slate; }
+  a.nav-link.active {
+    color: $sky-700 !important;
+    font-weight: 650;
+    border-left-color: $sky-500 !important;
+  }
+}
+
+// Schema diagram (Data lesson)
+.schema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0 1.4rem;
+}
+.schema-table {
+  background: #ffffff;
+  border: 1px solid $sky-200;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(3, 105, 161, 0.08);
+  font-family: $font-family-monospace;
+  font-size: 0.82rem;
+
+  .schema-name {
+    background: linear-gradient(90deg, $sky-800, $sky-500);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+  }
+  .schema-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.35rem 0.8rem;
+    border-top: 1px solid $sky-100;
+    span:last-child { color: #0f766e; }
+  }
+  .schema-row.key span:first-child { color: $sky-700; font-weight: 700; }
+}
+.schema-caption { font-size: 0.85rem; color: $slate; text-align: center; margin-top: -0.4rem; }
+
+// Landing page report cards
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.1rem;
+  margin: 1.2rem 0 1.8rem;
+}
+.report-card {
+  background: #ffffff;
+  border: 1px solid $sky-200;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem 1.2rem;
+  box-shadow: 0 6px 20px rgba(3, 105, 161, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(3, 105, 161, 0.14); }
+
+  p { margin-bottom: 0.4rem; }
+  .step {
+    font-family: $font-family-monospace;
+    font-size: 0.75rem;
+    color: $sky-600;
+    letter-spacing: 0.05em;
+  }
+  .report-title { font-size: 1.1rem; font-weight: 750; color: $sky-900; }
+  .badge-done, .badge-soon {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
+  .badge-done { background: $sky-500; color: #fff; }
+  .badge-soon { background: $sky-100; color: $sky-700; }
+}
+.report-card.done { border-top: 5px solid $sky-500; }
+.report-card.soon { border-top: 5px dashed $sky-200; opacity: 0.85; }

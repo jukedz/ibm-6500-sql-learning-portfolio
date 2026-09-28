@@ -1,0 +1,15 @@
+project:
+  type: default
+  output-dir: docs
+
+format:
+  html:
+    theme: [default, sql-theme.scss]
+    title-block-banner: true
+    toc: true
+    toc-title: "Contents"
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+    code-copy: true
+    embed-resources: true

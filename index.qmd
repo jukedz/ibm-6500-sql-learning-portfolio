@@ -1,0 +1,57 @@
+---
+title: "IBM 6500 SQL Learning Portfolio"
+subtitle: "DataCamp course-completion evidence and SQL learning notes"
+author: "Julie Diaz"
+format:
+  html:
+    toc: false
+    number-sections: false
+---
+
+**Student:** Julie Diaz\
+**Course:** IBM 6500, Customer Insight Methods and Survey Research\
+**Program:** MSDM, Cal Poly Pomona
+
+This portfolio contains my DataCamp course-completion evidence and learning notes for SQL and BigQuery. Each report documents what I learned, the key SQL syntax from the course, worked examples, and how the skills can support digital marketing analytics and my MSDM Culminating Experience Project (CEP).
+
+## Reports
+
+::: {.report-grid}
+
+::: {.report-card .done}
+[Report 1]{.step}
+
+[Introduction to SQL](introduction-to-sql.html){.report-title}
+
+Relational databases, tables, data types, and writing basic queries.
+
+[Completed]{.badge-done}
+:::
+
+::: {.report-card .soon}
+[Report 2]{.step}
+
+[Intermediate SQL]{.report-title}
+
+Filtering, aggregate functions, sorting, and grouping.
+
+[To be completed]{.badge-soon}
+:::
+
+::: {.report-card .soon}
+[Report 3]{.step}
+
+[Introduction to BigQuery]{.report-title}
+
+Querying large datasets in Google BigQuery.
+
+[To be completed]{.badge-soon}
+:::
+
+:::
+
+## Report Links
+
+- [Introduction to SQL](introduction-to-sql.html)
+- Intermediate SQL (to be completed)
+- Introduction to BigQuery (to be completed)
