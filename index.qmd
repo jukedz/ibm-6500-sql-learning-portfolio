@@ -28,22 +28,22 @@ Relational databases, tables, data types, and writing basic queries.
 [Completed]{.badge-done}
 :::
 
-::: {.report-card .soon}
+::: {.report-card .done}
 [Report 2]{.step}
 
-[Intermediate SQL]{.report-title}
+[Introduction to BigQuery](introduction-to-bigquery.html){.report-title}
 
-Filtering, aggregate functions, sorting, and grouping.
+BigQuery architecture, loading data, dates, nested data, window functions, and query optimization.
 
-[To be completed]{.badge-soon}
+[Completed]{.badge-done}
 :::
 
 ::: {.report-card .soon}
 [Report 3]{.step}
 
-[Introduction to BigQuery]{.report-title}
+[Intermediate SQL]{.report-title}
 
-Querying large datasets in Google BigQuery.
+Filtering, aggregate functions, sorting, and grouping.
 
 [To be completed]{.badge-soon}
 :::
@@ -53,5 +53,5 @@ Querying large datasets in Google BigQuery.
 ## Report Links
 
 - [Introduction to SQL](introduction-to-sql.html)
+- [Introduction to BigQuery](introduction-to-bigquery.html)
 - Intermediate SQL (to be completed)
-- Introduction to BigQuery (to be completed)
