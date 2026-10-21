@@ -38,14 +38,14 @@ BigQuery architecture, loading data, dates, nested data, window functions, and q
 [Completed]{.badge-done}
 :::
 
-::: {.report-card .soon}
+::: {.report-card .done}
 [Report 3]{.step}
 
-[Intermediate SQL]{.report-title}
+[Intermediate SQL](intermediate-sql.html){.report-title}
 
-Filtering, aggregate functions, sorting, and grouping.
+Counting, filtering, aggregate functions, sorting, and grouping.
 
-[To be completed]{.badge-soon}
+[Completed]{.badge-done}
 :::
 
 :::
@@ -54,4 +54,4 @@ Filtering, aggregate functions, sorting, and grouping.
 
 - [Introduction to SQL](introduction-to-sql.html)
 - [Introduction to BigQuery](introduction-to-bigquery.html)
-- Intermediate SQL (to be completed)
+- [Intermediate SQL](intermediate-sql.html)
